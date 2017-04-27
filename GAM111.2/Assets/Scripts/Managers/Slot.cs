@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class Slot : MonoBehaviour 
+public class Slot : MonoBehaviour 
 {
 	//these are fields
-	public Monster activeMonster;
+	public MasterClass activeClass;
 	public Player owner;
 	//public Slot[] targetableSlots;
 	public int index;
@@ -29,7 +29,7 @@ using UnityEngine;
 	{
 		get 
 		{
-			return activeMonster == null;
+			return activeClass == null;
 		}
 	}
 
@@ -37,7 +37,7 @@ using UnityEngine;
     {
         get
         {
-            return activeMonster != null;
+            return activeClass != null;
         }
     }
 
@@ -45,29 +45,35 @@ using UnityEngine;
     {
         owner = p;
         index = i;
-        activeMonster = null;
+        activeClass = null;
     }
 
     public void Deactivate()
     {
-        if (activeMonster != null)
+        if (activeClass != null)
         {
-            activeMonster.GoIdle();
+            activeClass.GoIdle();
         }
     }
 
     public void Activate()
     {
-        if (activeMonster != null)
+        if (activeClass != null)
         {
-            activeMonster.GoActive();
+            activeClass.GoActive();
         }
     }
 
-    //we have a collider on us so we can be clicked on
     void OnMouseUpAsButton()
     {
-        owner.SetSelectedMonster(this);
+        owner.SetSelectedClass(this);
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
     }
 }
-*/

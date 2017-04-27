@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-/*public class Player : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	//does this actually go here?
 	//	UI perhaps
-	public Monster selectedMonster;
-    PlayerUIController _uiController;
-    public PlayerUIController UIController
+	public MasterClass selectedClass;
+    UIController _uiController;
+    public UIController UIController
     {
         get
         {
             if(_uiController == null)
-                _uiController = FindObjectOfType<PlayerUIController>();
+                _uiController = FindObjectOfType<UIController>();
 
             return _uiController;
         }
@@ -75,7 +75,7 @@ using UnityEngine;
         }
     }
 
-    public void HandleMonsterAttack(Monster mon)
+    public void HandleMonsterAttack(MasterClass mon)
     {
         HP -= mon.currentStats.Att;
 
@@ -85,12 +85,12 @@ using UnityEngine;
         }
     }
 
-    public void SetSelectedMonster(Slot s)
+    public void SetSelectedClass(Slot s)
     {
         if(s == null || System.Array.IndexOf(myField,s) != -1)
         {
             if (s != null && s.HasMonster)
-                selectedMonster = s.activeMonster;
+                selectedClass = s.activeClass;
 
             UIController.UpdateFromSlot(s);
         }
@@ -100,7 +100,7 @@ using UnityEngine;
     {
         for (int i = 0; i < myField.Length; i++)
         {
-            if (myField[i].HasMonster && myField[i].activeMonster.IsAlive)
+            if (myField[i].HasMonster && myField[i].activeClass.IsAlive)
                 return true;
         }
 
@@ -108,4 +108,3 @@ using UnityEngine;
         return false;
     }
 }
-*/

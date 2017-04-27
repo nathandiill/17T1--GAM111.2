@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Titan : MasterClass {
+public class Titan : MasterClass
+{
 
     public static Titan Instance;
 
@@ -15,8 +16,8 @@ public class Titan : MasterClass {
     public int hulkSmash = 4;
     public int hulkSmashAOE = 1;
     public float armourUp;
-	
-	void Start ()
+
+    void Start ()
     {
 		
 	}
@@ -24,6 +25,6 @@ public class Titan : MasterClass {
 	
 	void Update ()
     {
-		
-	}
+        
+    }
 }
