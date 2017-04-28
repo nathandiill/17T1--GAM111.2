@@ -1,0 +1,19 @@
+Monster states need to do something
+-Need to take multiple turns on some actions
+Game Over needs to show more info than just game over, like who one
+Attacks need to take time to occur, not just everything at once
+Need to use the event system to split out some of the logic, in particular the effects
+-should also fire a global event for the statemanager changing states, could piggyback of existing delegate
+Audio
+-Music
+-SFX
+Effects
+-Particles or anims for
+--Select
+--Attack
+--Hit
+--Die
+Tween it!
+
+Minor
+-clean up field on end of game / enter generate
