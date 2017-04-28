@@ -16,11 +16,38 @@ public class Hunter : MasterClass {
     public int exposedAttackSD = 3;
     public float dodgeThis;
 
-	void Start ()
+    void takeDamage(int damageTaken)
+    {
+        hunterHealth = hunterHealth - damageTaken;
+    }
+
+    void dealExposedAttack(int exposedAttack, int targetHealth)
+    {
+        targetHealth = targetHealth - exposedAttack;
+    }
+
+    void dealExposedAttackSD(int exposedAttackSD, int hunterHealth)
+    {
+        hunterHealth = hunterHealth - exposedAttackSD;
+    }
+
+    void dealDodgeThis(int incomingDamage, int targetHealth)
+    {
+        int chanceRoll = UnityEngine.Random.Range(1, 101);
+        if (chanceRoll <= 100)
+        {
+            incomingDamage = 0;
+        }
+        else
+        {
+            targetHealth = targetHealth - incomingDamage;
+        }
+    }
+
+    void Start ()
     {
 		
 	}
-	
 	
 	void Update ()
     {

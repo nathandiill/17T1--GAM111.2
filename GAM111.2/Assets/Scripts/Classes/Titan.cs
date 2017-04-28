@@ -17,9 +17,24 @@ public class Titan : MasterClass
     public int hulkSmashAOE = 1;
     public float armourUp;
 
-    void dealHulkSmash()
+    void takeDamage(int damageTaken)
     {
+        titanHealth = titanHealth - damageTaken;
+    }
 
+    void dealHulkSmash(int hulkSmash, int targetHealth)
+    {
+        targetHealth = targetHealth - hulkSmash;
+    }
+
+    void dealHulkSmashAOE(int hulkSmashAOE, int targetHealth)
+    {
+        targetHealth = targetHealth - hulkSmashAOE;
+    }
+
+    void dealArmourUp(int incomingDamage, int damageTaken)
+    {
+        damageTaken = incomingDamage / 2;
     }
 
     void Start ()

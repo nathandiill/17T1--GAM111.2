@@ -14,12 +14,26 @@ public class Warlock : MasterClass {
     public int warlockHealth = 40;
     public int novaBomb = 1;
     public int radiance = 6;
-	
-	void Start ()
+
+    void takeDamage(int damageTaken)
     {
-		
-	}
-	
+        warlockHealth = warlockHealth - damageTaken;
+    }
+
+    void dealNovaBomb(int novaBomb, int targetHealth)
+    {
+        targetHealth = targetHealth - novaBomb;
+    }
+
+    void dealRadiance(int radiance, int warlockHealth)
+    {
+        warlockHealth = warlockHealth + radiance;
+    }
+
+    void Start()
+    {
+
+    }
 	
 	void Update ()
     {
