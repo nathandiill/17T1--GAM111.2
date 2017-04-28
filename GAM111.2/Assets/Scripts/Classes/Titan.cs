@@ -17,12 +17,16 @@ public class Titan : MasterClass
     public int hulkSmashAOE = 1;
     public float armourUp;
 
+    void dealHulkSmash()
+    {
+
+    }
+
     void Start ()
     {
 		
 	}
-	
-	
+		
 	void Update ()
     {
         

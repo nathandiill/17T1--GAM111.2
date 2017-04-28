@@ -5,7 +5,8 @@ using UnityEngine;
 public class MasterClass : MonoBehaviour {
 
     public int attack = 5;
-    public GameObject Target;
+    public GameObject[] Shooter;
+    public GameObject[] Target;
 	
 	void Start ()
     {
@@ -15,12 +16,21 @@ public class MasterClass : MonoBehaviour {
 
 	void Update ()
     {
-		
+		if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                Debug.Log(hit.transform.gameObject.name);
+            }
+        }
 	}
 
     void standardAttack(int attack)
     {
-
+        
     }
     public Slot mySlot;
 

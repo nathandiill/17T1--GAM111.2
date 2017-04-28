@@ -73,7 +73,7 @@ public class Slot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            
+            GetComponent<Renderer>().material.color = Color.blue;
         }
     }
 }
